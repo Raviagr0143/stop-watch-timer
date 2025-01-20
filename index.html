@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to the Tailwind CSS output file -->
+    <link href="../output.css" rel="stylesheet" />
+
+    <title>RB Stopwatch</title>
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 flex min-h-screen justify-center items-center p-4"
+  >
+    <div
+      class="container mx-4 w-full md:w-1/3 bg-gradient-to-r from-pink-100 via-red-100 to-yellow-100 flex flex-col justify-center items-center gap-2 p-6 rounded-lg shadow-lg"
+    >
+      <!-- Title of the Stopwatch -->
+      <h1 class="title text-blue-900 font-bold text-2xl">Stopwatch Timer</h1>
+
+      <div class="stopwatch flex flex-col gap-2 items-center">
+        <!-- Timer Display -->
+        <div class="timer text-3xl font-mono mb-2">
+          <span id="minutes">00</span>: <span id="seconds">00</span>:
+          <span id="milliseconds">00</span>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls flex gap-4 mt-4">
+          <button
+            id="startBtn"
+            class="px-3 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-700 hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Start
+          </button>
+          <button
+            id="stopBtn"
+            class="px-3 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-700 hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Stop
+          </button>
+          <button
+            id="pauseBtn"
+            class="px-3 py-2 bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-700 hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Pause
+          </button>
+          <button
+            id="resetBtn"
+            class="px-3 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700 hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Reset
+          </button>
+        </div>
+
+        <!-- Lap Timer Section -->
+        <div class="laps flex flex-col items-center w-full mt-6">
+          <h2 class="lap-title text-lg font-bold">Lap Timer</h2>
+          <ul id="lapList" class="w-full bg-gray-200 rounded-md p-4"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
